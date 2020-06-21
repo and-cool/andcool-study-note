@@ -1,0 +1,14 @@
+{
+    "title" : "Javascript core notes",
+    "author" : "Howie Liu",
+    "description" : "Study notes about javascript",
+    "language" : "zh-hans",
+    "links" : {
+        "sidebar" : {
+            "Home" : "http://hao_dsliu.blog.163.com"
+        }
+    },
+    "plugins": [
+        "splitter"
+    ]
+}
