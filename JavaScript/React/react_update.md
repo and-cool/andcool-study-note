@@ -1,5 +1,3 @@
-
-
 # React v16.3之后的组件生命周期函数
 
 [程墨Morgan](https://www.zhihu.com/people/morgancheng)
@@ -18,7 +16,7 @@ React v16.0刚推出的时候，是增加了一个componentDidCatch生命周期�
 
 先来看React v16.3之前的生命周期函数（图中实际上少了componentDidCatch)，如下图。
 
-[![img](images/react_before16.0.jpg)](images/react_before16.0.jpg)
+![img](images/react_before16.0.jpg)](images/react_before16.0.jpg)
 
 这个生命周期函数非常的对称，有componentWilUpdate对应componentDidUpdate，有componentWillMount对应componentDidMount；也考虑到了因为父组件引发渲染可能要根据props更新state的需要，所以有componentWillReceiveProps。
 
