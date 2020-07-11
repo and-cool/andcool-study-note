@@ -18,7 +18,7 @@ React Router 通过 Router 和 Route 两个组件完成路路由功能，在 Web
 
 ```javascript
  import React from "react";
-import { BrowserRouter, Link, Route } from "react-router- dom";
+import { BrowserRouter, Link, Route } from "react-router-dom";
 function ProductList(props) {
   return <div>ProductList</div>;
 }
@@ -99,7 +99,7 @@ function ProductMgt(props) {
 
 ### 动态引入 **&&** 基于路由的代码分割
 
-**React.lazy **接受一个函数，这个函数需要动态调用 **import()**。它必须 返回⼀一个 **Promise** ，该 Promise 需要 resolve ⼀一个 **defalut export** 的 React 组件。
+**React.lazy **接受一个函数，这个函数需要动态调用 **import()**。它必须 返回⼀一个 **Promise** ，该 Promise 需要 resolve ⼀个 **defalut export** 的 React 组件。
 
 然后应在** Suspense** 组件中渲染 lazy 组件，如此使得我们可以使⽤在等待 加载 lazy 组件时做优雅降级(如 loading 指示器等)。
 
@@ -114,7 +114,8 @@ const App = () => (<Router>
   //fallback 属性接受任何在组件加载过程中你想展示的 React 元素。 
   <Suspense fallback={<div>Loading...</div>}>
     <Switch>
-      <Route exact path="/" component={Home} /> <Route path="/about" component={About} />
+      <Route exact path="/" component={Home} />
+			<Route path="/about" component={About} />
     </Switch>
   </Suspense>
 </Router>);
@@ -159,7 +160,7 @@ function PrivateRoute({ component: Component, isLogin, ...rest }) {
                 }}
               />
             )
-      }
+      	}
     />
   );
 }
