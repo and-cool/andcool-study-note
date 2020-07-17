@@ -150,14 +150,15 @@ useReducer是useState的可选项，常⽤于组件有复杂状态逻辑时，�
   function fruitReducer(state, action) {
     switch (action.type) {
       case "init":
-        return action.payload; case "add":
-  
-        return [...state, action.payload]; default:
+        return action.payload; 
+      case "add":
+        return [...state, action.payload]; 
+      default:
         return state;
     }
   }
   export default function HooksTest() {
-    // 组件内的状态不不需要了了
+    // 组件内的状态不需要了
     // const [fruits, setFruits] = useState([]);
     // useReducer(reducer，initState)
     const [fruits, dispatch] = useReducer(fruitReducer, []);
@@ -178,14 +179,15 @@ useReducer是useState的可选项，常⽤于组件有复杂状态逻辑时，�
     );
   }
   ```
-
+```js
+  
   
 
 #### useContext
 
 useContext⽤于在快速在函数组件中导入上下⽂。
 
-```js
+​```js
 import React, { useContext } from "react"; // 创建上下⽂文
 const Context = React.createContext();
 export default function HooksTest() { 
@@ -193,7 +195,7 @@ export default function HooksTest() {
     {/* 提供上下⽂文的值 */ }
     <Context.Provider value={{ fruits, dispatch }}>
       <div>
-      {/* 这⾥里里不不再需要给FruitAdd传递状态mutation函数，实现了了解 耦 */}
+      {/* 这⾥里里不不再需要给FruitAdd传递状态mutation函数，实现了解耦 */}
         <FruitAdd />
       </div>
     </Context.Provider>

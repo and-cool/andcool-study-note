@@ -33,7 +33,8 @@ export default function RouterTest() {
         {/* 导航 */}
         <Link to="/">商品列列表</Link>
         <Link to="/management">商品管理理</Link>
-      </nav> <div>
+      </nav>
+    	<div>
         {/* 直接在组件中定义路路由 */}
         {/* 根路路由要添加exact，render可以实现条件渲染 */}
         <Route exact path="/" component={ProductList} />

@@ -50,7 +50,7 @@ export default function HocTest() {
 
 ```js
 
-// withConsumer是⾼高阶组件⼯工⼚厂，它能根据配置返回⼀一个⾼高阶组件 
+// withConsumer是⾼阶组件⼯厂，它能根据配置返回⼀个⾼高阶组件 
 function withConsumer(Consumer) {
   return Comp => props => {
     return <Consumer>

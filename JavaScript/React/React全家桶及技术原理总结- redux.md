@@ -6,13 +6,13 @@
 
 致性且易于测试。
 
- <img src="/Users/andcool/Documents/workspace/Javascript-Note/JavaScript/React/images/image-20200708210559367.png" alt="image-20200708210559367" style="zoom: 67%;" />
+ <img src="./images/image-20200708210559367.png" alt="image-20200708210559367" style="zoom: 67%;" />
 
 从图中可以看出，如果不用Redux，我们要传递state是⾮常麻烦的。 Redux中，可以把数据先放在数据仓库(store-公⽤用状态存储空间)中，这里可以统⼀管理状态，然后哪个组件用到了，就去stroe中查找状态。如果途中的紫⾊组件想改变状态时，只需要改变 store 中的状态，然后其他组件就会跟着中的自动进⾏改变。
 
 ### 2. Redux工作流
 
-<img src="/Users/andcool/Documents/workspace/Javascript-Note/JavaScript/React/images/image-20200708210807817.png" alt="image-20200708210807817" style="zoom: 67%;" />
+<img src="./images/image-20200708210807817.png" alt="image-20200708210807817" style="zoom: 67%;" />
 
 redux例子：累加计数器
 
@@ -135,7 +135,7 @@ Redux 官⽅提供的 React 绑定库。 具有⾼效且灵活的特性。
 
 简易流程图
 
-<img src="/Users/andcool/Documents/workspace/Javascript-Note/JavaScript/React/images/image-20200708212150937.png" alt="image-20200708212150937" style="zoom:67%;" />
+<img src="./images/image-20200708212150937.png" alt="image-20200708212150937" style="zoom:67%;" />
 
 **react-redux提供两个api**
 
@@ -324,7 +324,7 @@ export default class MyReduxTest extends Component {
 
 核心任务是实现函数序列执⾏
 
-<img src="/Users/andcool/Documents/workspace/Javascript-Note/JavaScript/React/images/image-20200708214252673.png" alt="image-20200708214252673" style="zoom:67%;" />
+<img src="./images/image-20200708214252673.png" alt="image-20200708214252673" style="zoom:67%;" />
 
 函数聚合
 
@@ -369,7 +369,7 @@ import { applyMiddleware } from "../store/redux";
 function logger({dispatch, getState}) { 
   	return dispatch => action => {
       // 中间件任务
-      console.log(action.type + '执⾏行行了了!!'); // 下⼀一个中间件
+      console.log(action.type + '执⾏了!!'); // 下⼀个中间件
       return dispatch(action);
 		}
 }
